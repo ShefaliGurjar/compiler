@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE_CODE</title>
+    <script src="https://kit.fontawesome.com/621ee43dd8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <button onclick="runCode()">Run Code</button>
+        <br>
+        <!-- HTML textarea -->
+        <label for=""><i class="fa fa-html5" aria-hidden="true"></i> HTML</label>
+        <textarea id="code"></textarea>
+
+        <!-- Save button -->
+        <button onclick="saveCode()">Save</button>
+    </div>
+    
+    <div class="right">
+        <!-- Output iframe -->
+        <label for=""><i class="fa fa-play" aria-hidden="true"></i> Output</label>
+        <iframe id="output" src="" frameborder="0"></iframe>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

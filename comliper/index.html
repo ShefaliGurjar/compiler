@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CC Compiler</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #101826;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        main {
+            text-align: center;
+            background-color: #030712;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+        }
+
+        .text-container {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 65px;
+            font-weight: bold;
+            text-align: center;
+            background: linear-gradient(to right, orange, orangered);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .dropbtn {
+            background-color: #1F2936;
+            color: white;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-right: 30px;
+        }
+
+        /* Dropdown container (hidden by default). */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #363232;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: white;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #5b5454;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: black;
+        }
+
+        #loader {
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            position: fixed;
+            z-index: 999;
+            top: 0;
+            transition: all ease 0.7s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #loader h1 {
+            font-size: 4vw;
+            color: transparent;
+            background: linear-gradient(to right, orange, orangered);
+            -webkit-background-clip: text;
+            position: absolute;
+            opacity: 0;
+            animation-name: load;
+            animation-duration: 1s;
+            animation-delay: 1s;
+            animation-timing-function: linear;
+        }
+
+        #loader h1:nth-child(2) {
+            animation-delay: 2s;
+        }
+
+        #loader h1:nth-child(3) {
+            animation-delay: 3s;
+        }
+
+        @keyframes load {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+
+        .compiler-button button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #030712;
+            background-image: linear-gradient(to right, orange, orangered);
+            font-weight: 700;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loader">
+        <h1>CC COMPILER</h1>
+        <h1>WELCOME</h1>
+        <h1>HELLO CODER</h1>
+    </div>
+    <header>
+        <div class="logo">CC Compiler</div>
+    </header>
+    <main>
+        <div class="text-container">
+            <h1>CC Compiler</h1>
+            <p>Compile HTML, CSS, JavaScript Code on the go and make the world beautiful.</p>
+        </div>
+        <div class="compiler-button">
+            <a href="index2.html"><button>SINGLE WINDOW</button></a>
+            <a href="index3.html"><button>HTML WINDOW</button></a>
+        </div>
+    </main>
+
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+            }
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+
+
+        function loaderAnimation() {
+            var loader = document.querySelector("#loader")
+            setTimeout(function () {
+                loader.style.top = "-100%"
+            }, 4200)
+        }
+        loaderAnimation()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compiler Login/Signup</title>
+<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form sign-in">
+            <header class="auth-header">
+                <h3>Sign In</h3>
+            </header>
+            <form action="/login" method="post">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Sign In</button>
+            </form>
+            <p class="forgot-password">Forgot your password?</p>
+            <div class="auth-option">
+                <p>Don't have an account? <a href="#" class="sign-up-link">Sign Up</a></p>
+            </div>
+        </div>
+        <div class="form sign-up">
+            <header class="auth-header">
+                <h3>Sign Up</h3>
+            </header>
+            <form action="/signup" method="post">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="button">Sign Up</button>
+            </form>
+            <div class="auth-option">
+                <p>Already have an account? <a href="#" class="sign-in-link">Sign In</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
